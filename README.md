@@ -8,7 +8,7 @@
 
 ## 安装
 
-下载[Toastr.js For WP](http://https://github.com/syfxlin/toast-for-wp)→进入WordPress后台→安装插件并启用
+下载[Toastr.js For WP](https://github.com/syfxlin/toast-for-wp)→进入WordPress后台→安装插件并启用
 
 
 ## Change log  
