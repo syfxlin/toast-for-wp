@@ -68,7 +68,7 @@ if(!class_exists('WP_Toastr_Settings')) {
                 $setting_extended_time_out = get_option('cn_setting_extended_time_out');
                 if ($setting_extended_time_out === false) $setting_extended_time_out = '1000';
                 $setting_starttime = get_option('cn_setting_starttime');
-                if ($setting_starttime === false) $setting_title = '5000';
+                if ($setting_starttime === false) $setting_starttime = '5000';
                 
                 
                 echo "<script>function tmo(){toastr.options = {\"closeButton\":$setting_closebutton,\"debug\": false,\"newestOnTop\": $setting_newest_on_top,\"progressBar\": $setting_progress_bar,\"positionClass\": \"$setting_position\",\"preventDuplicates\": $setting_prevent_duplicates,\"onclick\": $setting_onclick,\"showDuration\": \"$setting_show_duration\",\"hideDuration\": \"$setting_hide_duration\",\"timeOut\": \"$setting_time_out\",\"extendedTimeOut\": \"$setting_extended_time_out\",\"showEasing\": \"$setting_show_easing\",\"hideEasing\": \"$setting_hide_easing\",\"showMethod\": \"$setting_show_method\",\"hideMethod\": \"$setting_hide_method\"}}
