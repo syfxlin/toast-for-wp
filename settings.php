@@ -16,7 +16,7 @@ if(!class_exists('WP_Toastr_Settings')) {
             if ($v === false) return true;
             if ($v) return true;
             return false;
-        } 
+        }
 		public function add_toastr() {
             //判断当前页面是否开启
             $will_show = false;
@@ -69,10 +69,9 @@ if(!class_exists('WP_Toastr_Settings')) {
                 if ($setting_extended_time_out === false) $setting_extended_time_out = '1000';
                 $setting_starttime = get_option('cn_setting_starttime');
                 if ($setting_starttime === false) $setting_starttime = '5000';
-                
-                
-                echo "<script>function tmo(){toastr.options = {\"closeButton\":$setting_closebutton,\"debug\": false,\"newestOnTop\": $setting_newest_on_top,\"progressBar\": $setting_progress_bar,\"positionClass\": \"$setting_position\",\"preventDuplicates\": $setting_prevent_duplicates,\"onclick\": $setting_onclick,\"showDuration\": \"$setting_show_duration\",\"hideDuration\": \"$setting_hide_duration\",\"timeOut\": \"$setting_time_out\",\"extendedTimeOut\": \"$setting_extended_time_out\",\"showEasing\": \"$setting_show_easing\",\"hideEasing\": \"$setting_hide_easing\",\"showMethod\": \"$setting_show_method\",\"hideMethod\": \"$setting_hide_method\"}}
-                setTimeout('tmo()', 0 )</script><script type='text/javascript'>function tm(){
+
+
+                echo "<script>toastr\.options \= {\"closeButton\":$setting_closebutton,\"debug\": false,\"newestOnTop\": $setting_newest_on_top,\"progressBar\": $setting_progress_bar,\"positionClass\": \"$setting_position\",\"preventDuplicates\": $setting_prevent_duplicates,\"onclick\": $setting_onclick,\"showDuration\": \"$setting_show_duration\",\"hideDuration\": \"$setting_hide_duration\",\"timeOut\": \"$setting_time_out\",\"extendedTimeOut\": \"$setting_extended_time_out\",\"showEasing\": \"$setting_show_easing\",\"hideEasing\": \"$setting_hide_easing\",\"showMethod\": \"$setting_show_method\",\"hideMethod\": \"$setting_hide_method\"};</script><script type='text/javascript'>function tm(){
                 toastr['$setting_toast_type']('$setting_content', '$setting_title')}
                 setTimeout('tm()', $setting_starttime )</script>";
                 }
@@ -102,17 +101,17 @@ if(!class_exists('WP_Toastr_Settings')) {
 
         	// 插件设置页面
         	add_settings_section(
-        	    'WP_Toastr-section', 
-        	    '1. Toastr.js Setting(配置参数)', 
-        	    array(&$this, 'settings_section_WP_Toastr'), 
+        	    'WP_Toastr-section',
+        	    '1. Toastr.js Setting(配置参数)',
+        	    array(&$this, 'settings_section_WP_Toastr'),
         	    'WP_Toastr'
         	);
-        	
+
             add_settings_field(
-                'WP_Toastr-setting_title', 
-                'Title(标题): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_title',
+                'Title(标题): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_title',
@@ -121,10 +120,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_content', 
-                'Content(内容): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_content',
+                'Content(内容): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_content',
@@ -133,10 +132,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_toast_type', 
-                'Toast Type(吐司类型): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_toast_type',
+                'Toast Type(吐司类型): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_toast_type',
@@ -145,10 +144,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_starttime', 
-                'Start Time(启动延迟): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_starttime',
+                'Start Time(启动延迟): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_starttime',
@@ -157,10 +156,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_position', 
-                'Position(位置): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_position',
+                'Position(位置): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_position',
@@ -169,10 +168,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_progress_bar', 
-                'Progress Bar(进度条): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_progress_bar',
+                'Progress Bar(进度条): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_progress_bar',
@@ -181,10 +180,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_prevent_duplicates', 
-                'Prevent Duplicates(防止重复): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_prevent_duplicates',
+                'Prevent Duplicates(防止重复): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_prevent_duplicates',
@@ -193,10 +192,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_newest_on_top', 
-                'Newest on top(最新置顶): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_newest_on_top',
+                'Newest on top(最新置顶): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_newest_on_top',
@@ -205,10 +204,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_closebutton', 
-                'Close Button(关闭按钮): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_closebutton',
+                'Close Button(关闭按钮): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_closebutton',
@@ -217,10 +216,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_show_easing', 
-                'Show Easing(显示缓解): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_show_easing',
+                'Show Easing(显示缓解): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_show_easing',
@@ -229,10 +228,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_hide_easing', 
-                'Hide Easing(隐藏缓解): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_hide_easing',
+                'Hide Easing(隐藏缓解): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_hide_easing',
@@ -241,10 +240,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_show_method', 
-                'Show Method(显示动画): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_show_method',
+                'Show Method(显示动画): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_show_method',
@@ -253,10 +252,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_hide_method', 
-                'Hide Method(隐藏动画): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_hide_method',
+                'Hide Method(隐藏动画): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_hide_method',
@@ -265,10 +264,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_show_duration', 
-                'Show Duration(显示时间): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_show_duration',
+                'Show Duration(显示时间): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_show_duration',
@@ -277,10 +276,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_hide_duration', 
-                'Hide Duration(隐藏时间): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_hide_duration',
+                'Hide Duration(隐藏时间): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_hide_duration',
@@ -289,10 +288,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_time_out', 
-                'Time out(超时): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_time_out',
+                'Time out(超时): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_time_out',
@@ -301,10 +300,10 @@ if(!class_exists('WP_Toastr_Settings')) {
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_extended_time_out', 
-                'Extended time out(延长超时): ', 
-                array(&$this, 'settings_field_input_text'), 
-                'WP_Toastr', 
+                'WP_Toastr-setting_extended_time_out',
+                'Extended time out(延长超时): ',
+                array(&$this, 'settings_field_input_text'),
+                'WP_Toastr',
                 'WP_Toastr-section',
                 array(
                     'field' => 'cn_setting_extended_time_out',
@@ -312,7 +311,7 @@ if(!class_exists('WP_Toastr_Settings')) {
                     'type' => 'text'
                 )
             );
-              
+
             // 第二部分
             register_setting('WP_Toastr-checkbox-group', 'cn_setting_ishome');
             register_setting('WP_Toastr-checkbox-group', 'cn_setting_issearch');
@@ -321,57 +320,57 @@ if(!class_exists('WP_Toastr_Settings')) {
             register_setting('WP_Toastr-checkbox-group', 'cn_setting_is404');
 
             add_settings_section(
-                'WP_Toastr-checkbox-section', 
-                '2. Launch in Which pages(在哪些页面开启)', 
-                array(&$this, 'settings_section_WP_Toastr_Checkbox'), 
+                'WP_Toastr-checkbox-section',
+                '2. Launch in Which pages(在哪些页面开启)',
+                array(&$this, 'settings_section_WP_Toastr_Checkbox'),
                 'WP_Toastr_Checkbox'
             );
 
             add_settings_field(
-                'WP_Toastr-setting_ishome', 
-                'Index(首页): ', 
-                array(&$this, 'settings_field_checkbox'), 
-                'WP_Toastr_Checkbox', 
+                'WP_Toastr-setting_ishome',
+                'Index(首页): ',
+                array(&$this, 'settings_field_checkbox'),
+                'WP_Toastr_Checkbox',
                 'WP_Toastr-checkbox-section',
                 array(
                     'field' => 'cn_setting_ishome', 'value' => true
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_isarchive', 
-                'Archive(归档页): ', 
-                array(&$this, 'settings_field_checkbox'), 
-                'WP_Toastr_Checkbox', 
+                'WP_Toastr-setting_isarchive',
+                'Archive(归档页): ',
+                array(&$this, 'settings_field_checkbox'),
+                'WP_Toastr_Checkbox',
                 'WP_Toastr-checkbox-section',
                 array(
                     'field' => 'cn_setting_isarchive', 'value' => true
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_issingular', 
-                'Singular(文章单页): ', 
-                array(&$this, 'settings_field_checkbox'), 
-                'WP_Toastr_Checkbox', 
+                'WP_Toastr-setting_issingular',
+                'Singular(文章单页): ',
+                array(&$this, 'settings_field_checkbox'),
+                'WP_Toastr_Checkbox',
                 'WP_Toastr-checkbox-section',
                 array(
                     'field' => 'cn_setting_issingular', 'value' => true
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_issearch', 
-                'Search(搜索页): ', 
-                array(&$this, 'settings_field_checkbox'), 
-                'WP_Toastr_Checkbox', 
+                'WP_Toastr-setting_issearch',
+                'Search(搜索页): ',
+                array(&$this, 'settings_field_checkbox'),
+                'WP_Toastr_Checkbox',
                 'WP_Toastr-checkbox-section',
                 array(
                     'field' => 'cn_setting_issearch', 'value' => true
                 )
             );
             add_settings_field(
-                'WP_Toastr-setting_is404', 
-                '404(404页): ', 
-                array(&$this, 'settings_field_checkbox'), 
-                'WP_Toastr_Checkbox', 
+                'WP_Toastr-setting_is404',
+                '404(404页): ',
+                array(&$this, 'settings_field_checkbox'),
+                'WP_Toastr_Checkbox',
                 'WP_Toastr-checkbox-section',
                 array(
                     'field' => 'cn_setting_is404', 'value' => true
@@ -410,22 +409,22 @@ if(!class_exists('WP_Toastr_Settings')) {
             }
             echo sprintf('<input type="%s" name="%s" id="%s" value="%s" />', $type, $field, $field, $value);
         }
-        
+
         /**
          * 增加设置菜单
-         */		
+         */
         public function add_menu() {
          add_options_page(
-        	    'Toastr.js Setting', 
-        	    'Toastr.js', 
-        	    'manage_options', 
-        	    'WP_Toastr', 
+        	    'Toastr.js Setting',
+        	    'Toastr.js',
+        	    'manage_options',
+        	    'WP_Toastr',
         	    array(&$this, 'plugin_settings_page')
         	);
-        } 
+        }
         /**
          * Menu Callback
-         */		
+         */
         public function plugin_settings_page() {
         	if(!current_user_can('manage_options')) {
         		wp_die(__('您没有足够权限访问此页面'));
