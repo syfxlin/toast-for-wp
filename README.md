@@ -13,6 +13,9 @@
 
 ## Change log  
 
+= 1.2 =
+修复Origami主题中无法加载的问题
+
 = 1.1 =
 修复浏览器报错
 
@@ -21,7 +24,7 @@
 
 ## 详细信息
 
-[Toastr.js-插件发布帖](https://blog.syfxlin.win/toastr-js.html)
+[Toastr.js-插件发布帖](https://blog.ixk.me/toastr-js.html)
 
 ## 鸣谢
 
