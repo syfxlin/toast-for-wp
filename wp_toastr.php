@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Toastr.js
-Plugin URI: https://syfxlin.win
+Plugin URI: https://blog.ixk.me/toastr-js.html
 Description: 在你的网站添加Toast弹窗通知。
-Version: 0.1
+Version: 1.2
 Author: Otstar Lin
-Author URI: https://syfxlin.win/
+Author URI: https://ixk.me/
 License: Apache Licence 2.0
 */
 
